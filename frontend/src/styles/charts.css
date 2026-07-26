@@ -1,0 +1,76 @@
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.chart-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+}
+
+/* World map */
+.world-map-container {
+  position: relative;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.world-map-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+}
+
+.world-map-controls select { width: auto; min-width: 220px; }
+
+.map-info-panel {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  min-width: 200px;
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+}
+
+.map-info-country { font-weight: 700; font-size: 1rem; margin-bottom: 0.4rem; }
+.map-info-rank { font-size: 0.9rem; color: var(--color-text-secondary); }
+
+.map-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.75rem;
+}
+
+.legend-gradient {
+  height: 10px;
+  width: 100px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #e74c3c, #f39c12, #2ecc71);
+}

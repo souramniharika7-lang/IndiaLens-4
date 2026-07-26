@@ -1,0 +1,5 @@
+# Root level
+.kiro/
+*.log
+.DS_Store
+Thumbs.db
