@@ -14,7 +14,15 @@ const app = express();
 const JWT_SECRET = process.env.JWT_SECRET || 'indialens_super_secret_jwt_key_2026';
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: ['http://localhost:3000', 'http://127.0.0.1:3000'], credentials: true }));
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    'https://indialens-frontend.onrender.com',
+    /\.onrender\.com$/
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // ── Helpers ──────────────────────────────────────────────────────────────────

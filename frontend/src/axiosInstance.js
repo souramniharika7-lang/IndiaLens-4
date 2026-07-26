@@ -2,10 +2,10 @@ import axios from 'axios';
 
 /**
  * Axios instance with base URL and JWT interceptors.
- * Uses CRA proxy (package.json "proxy") so baseURL is relative.
+ * Uses CRA proxy in development, deployed backend URL in production.
  */
 const axiosInstance = axios.create({
-  baseURL: '/api',
+  baseURL: process.env.REACT_APP_API_URL || '/api',
   headers: { 'Content-Type': 'application/json' }
 });
 

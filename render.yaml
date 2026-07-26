@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: indialens-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server-local.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        value: indialens_super_secret_jwt_key_2026
+      - key: NODE_ENV
+        value: production
+
+  - type: web
+    name: indialens-frontend
+    env: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./build
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
